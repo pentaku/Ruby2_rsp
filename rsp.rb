@@ -23,14 +23,14 @@ class Rsp
   def janken
     hand_type = ["グー","チョキ","パー","戦わない"]
     my_hand = @input
-    pc_hand = rand(0..3)
+    pc_hand = rand(0..2)
     puts "============================"
     puts "あなた：#{hand_type[my_hand]}を出しました"
     puts "相手：#{hand_type[pc_hand]}を出しました"
     puts "============================"
 
     # 自分が3を選択したら終了
-    if my_hand === 3 || pc_hand === 3
+    if my_hand === 3
       return :exit # ゲームを終了するためにシンボルを返す
     end
 
